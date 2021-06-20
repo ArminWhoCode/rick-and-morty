@@ -1,0 +1,99 @@
+.services {
+  &__container {
+    margin-top: 4rem;
+    @include flex-box(column);
+    h2 {
+      font-weight: 900;
+      font-size: 1.5rem;
+      margin-bottom: 4rem;
+    }
+  }
+  &__list {
+   @include flex-box(column,center,flex-start)
+  }
+  &__item {
+    height: 200px;
+    width: 200px;
+    padding: $primary-size;
+    margin-bottom: 1.5rem;
+    border-radius: 1.25rem;
+    position: relative;
+    cursor: pointer;
+    &:nth-child(1) {
+      background-image: linear-gradient(
+        to right bottom,
+        #faddf0,
+        #ffdfe8,
+        #ffe3e2,
+        #ffe8df,
+        #fcede0
+      );
+    }
+    &:nth-child(2) {
+      background-image: linear-gradient(
+        to right bottom,
+        #dcddfa,
+        #d8e4fd,
+        #d7eafd,
+        #d9effd,
+        #def4fc
+      );
+    }
+    &:nth-child(3) {
+      background-image: linear-gradient(
+        to right bottom,
+        #def9f2,
+        #e2f9ed,
+        #e8f9e8,
+        #eff8e4,
+        #f7f7e2
+      );
+    }
+    &:hover{
+        svg {
+            right: 1rem;
+          }
+    }
+    h5 {
+      color: #808080;
+      font-size: 1.2rem;
+      margin-bottom: $primary-size;
+    }
+    p {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    svg {
+      position: absolute;
+      bottom: $primary-size;
+      right: $primary-size;
+      transition: all 0.5s ease;
+    }
+  }
+  @media (min-width: 700px) {
+    &__list {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: $primary-size;
+    }
+    &__item {
+      margin-bottom: unset;
+      margin-left: 1.25rem;
+    }
+  }
+  @media (min-width: 850px) {
+    &__item {
+      width: 250px;
+      height: 250px;
+      p{
+          font-size: 1.25rem;
+      }
+    }
+  }
+  @media (min-width: 1100px) {
+    &__item {
+      margin-left: 4rem;
+    }
+  }
+}

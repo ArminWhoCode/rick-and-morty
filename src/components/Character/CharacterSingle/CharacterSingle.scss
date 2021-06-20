@@ -1,0 +1,53 @@
+.character {
+  &__container {
+    @include flex-box(column);
+    margin-bottom: $primary-size;
+  }
+  &__single {
+    width: 100%;
+    max-width: 650px;
+    @include flex-box(column,space-evenly);
+    padding: $half-size;
+    margin: $primary-size 0;
+    img {
+      width: 150px;
+      height: 150px;
+      margin-bottom: 1rem;
+      border-radius: $primary-size;
+      margin-right: $half-size;
+    }
+  }
+  &__data {
+    p {
+      word-wrap: normal;
+      margin-bottom: $half-size;
+    }
+    span {
+      font-weight: 700;
+    }
+  }
+
+  @media (min-width: 500px) {
+    &__single {
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    &__data {
+      p {
+        font-size: 1.25rem;
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
+  @media (min-width: 800px) {
+    &__single {
+      flex-direction: row;
+      img {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+}

@@ -1,0 +1,100 @@
+.hero {
+  &__section {
+    margin-top: $primary-size; 
+    background-color: #000;
+    border-radius: 3rem;
+    color: #fff;
+  }
+  &__right {
+    position: relative;
+    width: 231px;
+    margin-right: 1rem;
+    img {
+      width: 100%;
+      position: absolute;
+      top: -40%;
+    }
+  }
+  &__left {
+    margin-top: 1rem;
+    button {
+      color: #fff;
+      background-color: transparent;
+      border: 2px solid #fff;
+      &:hover{
+        background-color: $primary-color;
+        border-color: $primary-color;
+        transition:all .5s ease;
+      }
+    }
+  }
+  @media (min-width: 700px) {
+    &__section {
+      height: 500px;
+    }
+    &__right {
+      width: 45%;
+      img{
+        top:-50%
+      }
+    }
+    &__left {
+      margin-top: -$primary-size;
+      h1 {
+        font-size: 3rem;
+      }
+      button {
+        padding: 1rem 3rem;
+      }
+    }
+  }
+  @media (min-width: 830px) {
+    &__section {
+      flex-direction: row-reverse;
+      width: 95vw;
+      height: 500px;
+    }
+    &__left,
+    &__right {
+      height: 100%;
+      width: 50%;
+      justify-content: center;
+      align-items: start;
+    }
+    &__right {
+      margin-right: $primary-size;
+      img {
+        position: unset;
+      }
+    }
+    &__left {
+      margin-top: 0;
+      justify-content: center;
+      align-items: start;
+      margin-left: 6rem;
+      h1 {
+        text-align: left;
+        font-size: 3rem;
+      }
+      button {
+        font-size: 1rem;
+        width: 60%;
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    &__left {
+      button {
+        width: 50%;
+      }
+    }
+  }
+  @media (min-width:1100px) {
+    &__right {
+      img {
+        position: absolute;
+        top: -13%;
+      }
+    }
+  }
+}

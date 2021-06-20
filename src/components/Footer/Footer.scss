@@ -1,0 +1,8 @@
+footer {
+  height: 10vh;
+  color: #fff;
+  width: 100%;
+  background-color: #000;
+  @include flex-box();
+  text-align: center;
+}

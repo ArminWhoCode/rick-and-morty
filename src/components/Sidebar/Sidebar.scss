@@ -1,0 +1,54 @@
+.sidebar {
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  transition: all 0.3s ease;
+  transform: translate(-100%);
+  z-index: -1;
+  &.sidebar--show {
+    transform: translate(0);
+    z-index: 1;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  .links {
+    margin-bottom: 2rem;
+    a {
+      display: block;
+      text-align: left;
+      font-size: 1rem;
+      text-transform: capitalize;
+      padding: 1rem 1.5rem;
+      color: #808080;
+      transition: all 0.3s ease;
+      &:hover {
+        padding: 1rem 1.5rem;
+        padding-left: $primary-size;
+        background: $primary-color;
+        color: #fff;
+      }
+    }
+  }
+
+  .close-btn {
+    font-size: $primary-size;
+    background: transparent;
+    border-color: transparent;
+    color: red;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0;
+    margin: 0.2rem 0 0;
+  }
+  @media (min-width: 992px) {
+    display: none;
+  }
+}
